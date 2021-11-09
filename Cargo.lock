@@ -58,7 +58,7 @@ dependencies = [
  "aws-sdk-qldbsession",
  "aws-smithy-http",
  "aws-types",
- "bigdecimal",
+ "bigdecimal 0.3.0",
  "chrono",
  "comfy-table",
  "dirs",
@@ -424,7 +424,18 @@ version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d1e50562e37200edf7c6c43e54a08e64a5553bfb59d9c297d5572512aa517256"
 dependencies = [
- "num-bigint",
+ "num-bigint 0.3.3",
+ "num-integer",
+ "num-traits",
+]
+
+[[package]]
+name = "bigdecimal"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6aaf33151a6429fe9211d1b276eafdf70cdff28b071e76c0b0e1503221ea3744"
+dependencies = [
+ "num-bigint 0.4.3",
  "num-integer",
  "num-traits",
 ]
@@ -1129,12 +1140,12 @@ version = "0.4.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "36e0e1193c93c331669335787dd6028ad0ecc819513db5e653f6be506fa1e24e"
 dependencies = [
- "bigdecimal",
+ "bigdecimal 0.2.2",
  "bindgen",
  "chrono",
  "cmake",
  "ion-c-sys-macros",
- "num-bigint",
+ "num-bigint 0.3.3",
  "paste",
 ]
 
@@ -1156,13 +1167,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f9b5511aa03f80ded9dd90d0244770cd7280a8eea1546fa25ea8f3e4dad0a541"
 dependencies = [
  "base64 0.12.3",
- "bigdecimal",
+ "bigdecimal 0.2.2",
  "bytes 0.4.12",
  "chrono",
  "delegate",
  "ion-c-sys",
  "nom 6.1.2",
- "num-bigint",
+ "num-bigint 0.3.3",
  "num-traits",
  "thiserror",
 ]
@@ -1370,6 +1381,17 @@ name = "num-bigint"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5f6f7833f2cbf2360a6cfd58cd41a53aa7a90bd4c202f5b1c7dd2ed73c57b2c3"
+dependencies = [
+ "autocfg",
+ "num-integer",
+ "num-traits",
+]
+
+[[package]]
+name = "num-bigint"
+version = "0.4.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f93ab6289c7b344a8a9f60f88d80aa20032336fe78da341afc91c8a2341fc75f"
 dependencies = [
  "autocfg",
  "num-integer",
